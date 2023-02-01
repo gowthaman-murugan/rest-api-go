@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "c7b922ff-3df1-42d6-a9ea-8eef987b6530",
+		"name": "Rest-API-Go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18883168"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"task_name\": \"Send mail to Raja\",\n    \"task_detail\": \"Have to send mail to regarding money\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/tasks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Feb 2023 04:50:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"task_name\": \"Send mail to Raja\",\n        \"task_detail\": \"Have to send mail to regarding money\",\n        \"date\": \"2020-03-10 00:00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetList",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/tasks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Feb 2023 17:14:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"task_name\": \"Send mail to Raja\",\n            \"task_detail\": \"Have to send mail to regarding money\",\n            \"date\": \"2020-03-10 00:00:00\"\n        },\n        {\n            \"id\": 2,\n            \"task_name\": \"Send mail to Raja\",\n            \"task_detail\": \"Have to send mail to regarding money\",\n            \"date\": \"2020-03-10 00:00:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tasks/one?id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"one"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/tasks/one?id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"one"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Feb 2023 04:53:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"task_name\": \"Send mail to Raja\",\n        \"task_detail\": \"Have to send mail to regarding money\",\n        \"date\": \"2020-03-10 00:00:00\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
