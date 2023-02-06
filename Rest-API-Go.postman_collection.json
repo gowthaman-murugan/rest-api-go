@@ -66,16 +66,105 @@
 				{
 					"name": "Update",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"task_name\": \"Send mail to Raja\",\n    \"task_detail\": \"Have to send mail to regarding money\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/tasks/update?id=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"task_name\": \"Send mail to Raja\",\n    \"task_detail\": \"Have to send mail to regarding money\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/tasks/update?id=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Feb 2023 22:07:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"task_name\": \"Send mail to Raja\",\n        \"task_detail\": \"Have to send mail to regarding money\",\n        \"date\": \"2020-03-10 00:00:00\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "GetList",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tasks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
 					},
 					"response": [
 						{
